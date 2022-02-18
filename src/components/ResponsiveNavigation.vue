@@ -17,7 +17,9 @@
 					{{ link.text }}
 					<i :class="link.icon" />
 				</router-link>
+
 			</li>
+
 		</ul>
 	</nav>
 </template>
@@ -110,5 +112,15 @@ nav {
 }
 a {
 	border-radius: 30%;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s ease-in-out;
 }
 </style>

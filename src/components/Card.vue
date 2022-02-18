@@ -50,8 +50,6 @@
 
     </span>
     <div v-show="showContent"> <br> <br> </div>
-        <br>
-    <br>
     <div>
         <span class="alignleft sketchy">10h</span>
         <span class="alignright sketchy">300zł</span>
@@ -102,7 +100,7 @@ export default {
 
 .page-contain {
   display: flex;
-  min-height: 10vh;
+  min-height: 9vh;
   align-items: center;
   justify-content: center;
   background: #e7f3f1;
@@ -116,22 +114,22 @@ export default {
   flex-direction: column;
 //   max-width: 40.75em;
 //   min-height: 40.75em;
-  max-width: 1240px;
-  min-width: 540px;
-  min-height: 840px;
-  max-height: 840px;
+  max-width: 1140px;
+  min-width: 470px;
+  min-height: 740px;
+  max-height: 740px;
   overflow: hidden;
   border-radius: 2.5em;
   text-decoration: none;
   background: white;
   margin: 0 0 0 0;
-  padding: 2.75em 2.5em;
+  padding: 0.75em 2.5em;
   box-shadow: 0 1.5em 2.5em -0.5em rgba(#000000, 0.1);
   transition: transform 0.45s ease, background 0.45s ease;
 
   h3 {
     color: #2e3c40;
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-weight: 600;
     line-height: 1;
     padding-bottom: 0.5em;

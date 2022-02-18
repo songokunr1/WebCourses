@@ -5,12 +5,12 @@
         <div class="column">
       <form>
           <label>Preferowane miejsce spotkania:</label>
-          <input type="checkbox" id="jack" value="Online" v-model="checkedNames">
-          
-    <label style="font-size: 1em;" for="Online">Online  </label>
+<input type="checkbox" id="Online" value="Online" v-model="checkedNames">
+<label style="font-size: 1em;" for="Online">Online</label>
+<input style="margin: 0 10px 0 20px" type="checkbox" id="stacjonarnie" value="stacjonarnie" v-model="checkedNames">
+<label style="font-size: 1em;" for="stacjonarnie">stacjonarnie za doplata</label>
 
-    <input style="margin: 10px;" type="checkbox" id="john" value="stacjonarnie" v-model="checkedNames">
-    <label style="font-size: 1em;" for="john">stacjonarnie za doplata</label>
+
 <br>
 
       <label>Rodzaj Kursu:</label>
@@ -55,19 +55,42 @@ import BuisnessCard from '@/components/BuisnessCard.vue'
 
 export default {
     components: {BuisnessCard},
-    props: ['showDetails']
+    props: ['showDetails'],
+    data(){
+      return {
+        checkedNames: [],
+      }
+    },
+    methods: {
+      copy(text){
+        navigator.clipboard.writeText(text).then(() => {
+        alert("successfully copied");
+      })
+      .catch(() => {
+        alert("something went wrong");
+      });
+
+      }
+    }
 }
 </script>
 
 <style scoped>
-
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
 .details {
     position: fixed;
-      width: 1200px;
-      height: 1000px;
+      width: 1100px;
+      height: 900px;
       top: 150px;
       margin: 0 auto;
-      background: rgb(151, 61, 211);
+      /* background: #753bbd; */
+      background: #753bbd;
+
       border-radius: 15px;
       box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -79,17 +102,17 @@ export default {
 }
 
 form {
-    width: 600px;
-    height: 850px;
-    margin: 60px auto;
+    width: 500px;
+    height: 820px;
+    margin: 30px auto;
     background: rgb(255, 255, 255);
     text-align: left;
-    padding: 40px;
+    padding: 20px;
     border-radius: 16px;
     align-items: left;
     position: relative;
     top: px;
-    left: 30px;
+    left: 0px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 2.5);
     
 
@@ -98,7 +121,7 @@ form {
     color: rgb(180, 29, 255);
     display: inline-block;
     margin: 25px 0 15px;
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;

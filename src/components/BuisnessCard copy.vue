@@ -12,7 +12,7 @@
 			<div class="job">Analist, Data Engineer</div>
 			<div class="job">pasjonat nauczania Pythona</div>
 			<div class="actions">
-				<button class="btn">+48514487406</button>
+				<button class="btn" >+48514487406</button>
 				<button class="btn">pawelm18@gmail.com</button>
         <button style="font-size: 10px;" class="btn">https://www.e-korepetycje.net/matpaw/programowanie</button>
 			</div>

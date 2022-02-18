@@ -1,4 +1,5 @@
 <template>
+
 <div class="frame">
   <div class="center">
     
@@ -14,9 +15,10 @@
 			<div class="job">Analist, Data Engineer</div>
 			<div class="job">pasjonat nauczania Pythona</div>
 			<div class="actions">
-				<button class="btn">+48514487406</button>
-				<button class="btn">pawelm18@gmail.com</button>
-        <button class="big">
+				<button class="btn" @click="copy(tel)">+48514487406</button>
+				<button class="btn" @click="copy(email)">pawelm18@gmail.com</button>
+        <button class="big" @click="copy(eKorepetycje)">
+      <NotEl :tytul='tytul' :Notyfication='Notyfication' />
           
           https://www.e-korepetycje.net/matpaw/programowanie</button>
 			</div>
@@ -40,13 +42,35 @@
 </div>
 </template>
 
+
 <script>
+import NotEl from '@/components/NotEl.vue'
 
 export default {
+  components: {NotEl},
   data() {
     return {
-       imageSrc: '@/assets/moje.jpg'
+       imageSrc: '@/assets/moje.jpg',
+       tel: '+48514487406',
+       email: 'pawelm18@gmail.com',
+       eKorepetycje: 'https://www.e-korepetycje.net/matpaw/programowanie',
+       tytul: 'tytul',
+       hejo: 'hejo',
+       Notyfication: 0
+
     }
+    },
+        methods: {
+      copy(text){
+        navigator.clipboard.writeText(text).then(() => {
+        this.tytul = text
+        this.Notyfication =   this.Notyfication +1    
+      })
+      .catch(() => {
+        alert("something went wrong");
+      });
+
+      }
     },
   computed: {
   iconUrl () {
@@ -62,8 +86,8 @@ export default {
 
 .center {
   position: relative;
-  top: 60px;
-  left: 50px;
+  top: 30px;
+  left: 0px;
   height: 559px;
   width: 520px;
   background: #fff;

@@ -2,7 +2,9 @@
 <div >
 <section class="page-contain" @click.self="showDetails=false">
    <button @mouseover="showContent = true" @mouseleave="showContent = false" @click="SetShowDetails" >
-   <a href="#" class="data-card" id=1>
+
+   <a href="#"  class="data-card" id=1>
+
     <h3>Python</h3>
     <h4>Podstawy</h4>
     <h5>Zobacz czego możesz się nauczyć</h5>
@@ -57,8 +59,10 @@
     <div></div>
   </a>
   </button>
-
-    <Details v-show="showDetails" showDetails=showDetails />
+  <div class="center" style="absolute">
+  <Details v-show="showDetails" showDetails=showDetails />
+  </div>
+    
     
 
      <!-- @click="SetShowDetails"  -->
@@ -114,16 +118,16 @@ export default {
   flex-direction: column;
 //   max-width: 40.75em;
 //   min-height: 40.75em;
-  max-width: 1140px;
-  min-width: 470px;
-  min-height: 740px;
-  max-height: 740px;
+  // max-width: 1140px;
+  // min-width: 470px;
+  // min-height: 740px;
+  // max-height: 740px;
   overflow: hidden;
   border-radius: 2.5em;
   text-decoration: none;
   background: white;
   margin: 0 0 0 0;
-  padding: 0.75em 2.5em;
+  padding: 0.75em 1.5em;
   box-shadow: 0 1.5em 2.5em -0.5em rgba(#000000, 0.1);
   transition: transform 0.45s ease, background 0.45s ease;
 

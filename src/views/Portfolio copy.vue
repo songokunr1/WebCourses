@@ -2,7 +2,6 @@
 
 
   <el-row :gutter="20">
-    
     <el-col :span="6"><div class="grid-content "><div class="skillCard"> 
   <Skill :data=data />
   </div>

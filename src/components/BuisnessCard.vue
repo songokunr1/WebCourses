@@ -204,7 +204,7 @@ export default {
   height: 155px;
   background: #e2cef3;
   text-align: center;
-  padding-top: 28px;
+  padding-top: 23%;
   transition: all 0.4s ease-in-out;
 }
 .stats .box:hover {
@@ -218,11 +218,11 @@ export default {
   display: block;
 }
 .stats .value {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
 }
 .stats .parameter {
-  font-size: 15px;
+  font-size: 19px;
 }
 
 

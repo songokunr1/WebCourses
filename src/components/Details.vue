@@ -1,10 +1,13 @@
 <template>
   <transition name="bounce">
+  <el-row :gutter="10">
+    <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="9" :offset="4">
+    <div>
+       <!-- class="grid-content bg-purple"> -->
+
 <div class="details">
-    <div class="row">
-        <div class="column">
       <form>
-          <label>Preferowane miejsce spotkania:</label>
+                 <h4>Preferowane miejsce spotkania: </h4> 
 <input type="checkbox" id="Online" value="Online" v-model="checkedNames">
 <label style="font-size: 1em;" for="Online">Online</label>
 <input style="margin: 0 10px 0 20px" type="checkbox" id="stacjonarnie" value="stacjonarnie" v-model="checkedNames">
@@ -39,12 +42,16 @@
     
   </form>
   </div>
-  <div class="column " > 
-      <BuisnessCard />
+  </div> 
+      </el-col>
+      <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="9" :offset="0">
 
-  </div>
-    </div>
+    <div> 
+      <!-- class="grid-content bg-purple"> -->
+       <BuisnessCard />
 </div>
+</el-col>
+  </el-row>
     </transition>
 
 </template>
@@ -83,36 +90,27 @@ export default {
 	float: right;
 }
 .details {
-    position: fixed;
-      width: 1100px;
-      height: 900px;
-      top: 150px;
+    position: relative;
       margin: 0 auto;
       /* background: #753bbd; */
       background: #753bbd;
 
       border-radius: 15px;
       box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 150px;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 2.5);
 }
 .form {
     background: white;
 }
 
 form {
-    width: 500px;
-    height: 820px;
+
     margin: 30px auto;
     background: rgb(255, 255, 255);
     text-align: left;
-    padding: 20px;
+    padding: 7px;
     border-radius: 16px;
     align-items: left;
     position: relative;
-    top: px;
-    left: 0px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 2.5);
     
 
@@ -202,5 +200,58 @@ form {
   }
 }
 
-        
+ .el-row {
+  margin-bottom: 20px;
+}
+.el-row:last-child {
+  margin-bottom: 0;
+}
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
+} 
+
+  h3 {
+    color: #963b96;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 0.5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 2px solid #753bbd;
+    transition: color 0.45s ease, border 0.45s ease;
+  }
+    h5 {
+    color: #2e3c40;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.45s ease, border 0.45s ease;
+
+  }
+
+  h4 {
+    color: rgb(180, 29, 255);
+    text-transform: uppercase;
+    font-size: 1.325em;
+    font-weight: 700;
+    line-height: 1;
+    /* margin: 0 0 1.777777778em; */
+    transition: color 0.45s ease;
+  }      
 </style>

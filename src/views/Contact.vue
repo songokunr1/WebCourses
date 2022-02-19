@@ -1,5 +1,12 @@
 <template>
-  <div class="center"><Details /></div>
+
+  
+  <el-row :gutter="20">
+    <el-col :span="24" :offset="0"
+      ><div class="">
+    <Details />
+ </div></el-col>
+  </el-row>
 </template>
 
 <script>
@@ -10,11 +17,11 @@ export default {
 </script>
 
 <style>
-.center {
+/* .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
+} */
 
 </style>

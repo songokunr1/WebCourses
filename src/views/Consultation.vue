@@ -7,26 +7,62 @@
       :timeout="5000"
       class="carousel"
       v-slot="{ currentSlide }"
-    >  <el-row :gutter="20">
+    >  
+
+    
 
       <Slide v-for="(slide, index) in carouselSlides" :key="index">
+        
+        <div v-show="currentSlide === index + 1">
+        <el-row :gutter="24">
+          <el-col :span="8">
+        <div class="grid-content">
+          <div class="skillCard"> 
+            <Skill :data=carouselSlides[giveMeCurrentSlide(currentSlide)-1].skills />
+            </div> 
+        </div>
+</el-col>
+          <el-col :span="8">
+        <div class="grid-content">
+          <div class="skillCard"> 
+            <Skill :data=carouselSlides[currentSlide].skills />
+            </div> 
+        </div>
+</el-col>
+          <el-col :span="8">
+        <div class="grid-content">
+          <div class="skillCard"> 
+            <Skill :data=carouselSlides[currentSlide+1].skills />
+            </div> 
+        </div>
+</el-col>
+      </el-row>
+      </div>
+      <!-- <div v-show="currentSlide === index + 1" class="slide-info">
+          <img :src="require(`@/assets/${slide.name}.jpg`)" alt="" />
+        </div> -->
+</Slide>
 
-      <el-col :span="6"><div class="grid-content ">
+<!-- {{currentSlide}} -->
+
+
+          <!-- {{index}}
+          asdfasd
+      <el-col :span="6"><div class="grid-content">
           <div class="skillCard"> 
       <Skill :data=data />
-  </div>
-</div>
-</el-col>
-        <!-- <div v-show="currentSlide === index + 1" class="slide-info">
-          <img :src="require(`../assets/${slide}.jpg`)" alt="" />
-        </div> -->
-      </Slide>
-      </el-row>
-
+    
+      carouselSlides2[index]
+  </div> -->
+<!-- </div> -->
+<!-- </el-col> -->
+        
+      <!-- </Slide> -->
     </Carousel>
 
   </div>
 </template>
+
 
 <script>
 import Carousel from "../components/Carousel.vue";
@@ -38,10 +74,10 @@ export default {
   name: "Home",
   components: { Carousel, Slide, Skill },
   setup() {
-    const carouselSlides = ["bg-1", "bg-2", "bg-3"];
-    const carouselSlides2 = [{"name": "Python - General", "skills": [{'name': "OOP", "skill": "60"}]}];
+    const carouselSlides2 = ["bg-1", "bg-2", "bg-3"];
+    const carouselSlides = [{"name": "bg-1", "skills": [{'name': "OOP", "skill": "60"}, {'name': "aaa", "skill": "30"}]}, {"name": "bg-2", "skills": [{'name': "OOP", "skill": "70"}, ]}, {"name": "bg-3", "skills": [{'name': "OOP", "skill": "50"}, ]}, {"name": "bg-2", "skills": [{'name': "OOP", "skill": "40"}, ]}];
 
-    return { carouselSlides };
+    return { carouselSlides};
   },
       data(){
         return {
@@ -56,7 +92,10 @@ export default {
 .carousel {
   position: relative;
   max-height: 50vh;
+  height: 50vh;
+  .navigate {
   height: 100vh;
+  }
   .slide-info {
     position: relative;
     top: 0;

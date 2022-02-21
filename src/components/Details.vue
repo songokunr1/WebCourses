@@ -59,6 +59,7 @@
 <script>
 
 import BuisnessCard from '@/components/BuisnessCard.vue'
+import { onUpdated } from '@vue/runtime-core';
 
 export default {
     components: {BuisnessCard},
@@ -78,7 +79,8 @@ export default {
       });
 
       }
-    }
+    },
+
 }
 </script>
 

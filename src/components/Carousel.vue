@@ -1,4 +1,5 @@
 <template>
+  {{currentSlide}}
   <div class="carousel">
     <slot :currentSlide="currentSlide" />
 
@@ -42,7 +43,7 @@ export default {
     const navEnabled = ref(props.navigation === undefined ? true : props.navigation);
     // next slide
     const nextSlide = () => {
-      if (currentSlide.value === getSlideCount.value) {
+      if (currentSlide.value === getSlideCount.value -1) {
         currentSlide.value = 1;
         return;
       }
@@ -87,7 +88,7 @@ export default {
 <style lang="scss">
 .navigate {
   padding: 0 16px;
-  height: 100%;
+  height: 40%;
   width: 100%;
   position: absolute;
   display: flex;

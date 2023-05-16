@@ -13,16 +13,7 @@
 			
 			<div class="name">Paweł Matejko</div>
 			<div class="job">Analist, Data Engineer</div>
-			<div class="job">pasjonat nauczania Pythona</div><br>
-        <v-btn class="pink white--text">
-    <v-icon class="icon" size="40" @click="openLink('https://www.linkedin.com/in/pawe%C5%82-matejko-73730516a/')">mdi-linkedin</v-icon>
-  </v-btn>
-  <v-btn class="pink white--text" >
-    <v-icon class="icon" size="36" @click="openLink('https://github.com/songokunr1')">mdi-github</v-icon>
-  </v-btn>
-    <v-btn class="pink white--text" >
-      <v-icon class="icon" size="40" @click="openEmail('pawelm18@gmail.com')">mdi-email</v-icon>
-  </v-btn>
+			<div class="job">pasjonat nauczania Pythona</div>
 			<div class="actions">
 				<button class="btn" @click="copy(tel)">+48514487406</button>
 				<button class="btn" @click="copy(email)">pawelm18@gmail.com</button>
@@ -31,17 +22,16 @@
           
           https://www.e-korepetycje.net/matpaw/programowanie</button>
           <button class="big text-h7 "  @click="redirectToForm"> Kliknij aby wysłać formularz z zapytaniem!</button>
-          
 			</div>
 		</div>
 		
 		<div class="stats">
 			<div class="box">
-				<span class="value">5+</span>
+				<span class="value">4+</span>
 				<span class="parameter">lat doświadczenia</span>
 			</div>
 			<div class="box">
-				<span class="value">40+</span>
+				<span class="value">30+</span>
 				<span class="parameter">uczniów</span>
 			</div>
 			<div class="box">
@@ -86,13 +76,7 @@ export default {
 
             this.tytul = text;
             this.Notyfication = this.Notyfication + 1;
-      },
-      openLink(url) {
-      window.open(url, '_blank');
-    },
-    openEmail(email) {
-      window.location.href = `mailto:${email}`;
-    }
+      }
     },
   computed: {
   iconUrl () {
@@ -110,7 +94,7 @@ export default {
   position: relative;
   top: 30px;
   left: 0px;
-  height: 679px;
+  height: 639px;
   width: 440px;
   background: #fff;
   border-radius: 15px;
@@ -223,7 +207,7 @@ export default {
 .stats .box {
   box-sizing: border-box;
   width: 140px;
-  height: 130px;
+  height: 155px;
   background: #e2cef3;
   text-align: center;
   padding-top: 23%;

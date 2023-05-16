@@ -1,7 +1,5 @@
 <template>
     <div class="card">
-    <el-card class="rounded-card" :body-style="{ padding: '20px'}">
-      <div class="card-body">
     <form @submit.prevent="submit">
       <v-text-field
         v-model="name.value.value"
@@ -12,10 +10,10 @@
       ></v-text-field>
 
       <v-text-field
-        v-model="surname.value.value"
+        v-model="surename.value.value"
         :counter="3"
         maxlength="15"
-        :error-messages="surname.errorMessage.value"
+        :error-messages="surename.errorMessage.value"
         label="Nazwisko"
       ></v-text-field>
 
@@ -34,10 +32,10 @@
       ></v-text-field>
   
       <v-select
-        v-model="topic.value.value"
+        v-model="select.value.value"
         :items="items"
-        :error-messages="topic.errorMessage.value"
-        label="Temat"
+        :error-messages="select.errorMessage.value"
+        label="Select"
       ></v-select>
 
       <v-textarea
@@ -68,16 +66,12 @@
         clear
       </v-btn>
     </form>
-  </div>
-  </el-card>
 </div>
-<br><br><br><br>
   </template>
   <script>
     import { ref } from 'vue'
     import { useField, useForm } from 'vee-validate'
-    import axios from 'axios';
-
+  
     export default {
       setup () {
         const { handleSubmit, handleReset } = useForm({
@@ -97,7 +91,7 @@
   
               return 'Must be a valid e-mail.'
             },
-            topic (value) {
+            select (value) {
               if (value) return true
   
               return 'Select an item.'
@@ -107,20 +101,20 @@
   
               return 'Must be checked.'
             },
-            text (value) {
-              if (value?.length <= 350 ) return true
+            // text (value) {
+            //   if (value?.length <= 150 ) return true
   
-              return 'Max 150 chars'
-            },
+            //   return 'Max 150 chars'
+            // },
           },
         })
         const name = useField('name')
-        const surname = useField('surname')
+        const surename = useField('surename')
         const phone = useField('phone')
         const email = useField('email')
         const text = useField('text')
 
-        const topic = useField('topic')
+        const select = useField('select')
         const checkbox = useField('checkbox')
         checkbox.value.value = '1'
   
@@ -137,53 +131,12 @@
           // 'Python wstęp do Data Enginier'
           'Inny',
         ])
-
-  //       const submit = handleSubmit(async values => {
-  // try {
-  //   const response = await axios.post('http://127.0.0.1:8888/send_email', JSON(values)
-  //   );}
-  //   catch (error) {
-  //       // Handle any errors that occur during the API request
-  //       console.error(error);
-  //     }
-  //     })
   
-        
-
-    const submit = handleSubmit(async values => {
-  try {
-    const response = await axios.post('http://127.0.0.1:8888/send_email', {
-      name: values.name,
-      surname: values.surname,
-      phone: values.phone,
-      email: values.email,
-      topic: values.topic,
-      text: values.text
-      });
-      // Handle the response from the API as needed
-      console.log(response.data);
-      } catch (error) {
-        // Handle any errors that occur during the API request
-        console.error(error);
-      }
-      try {
-    const response = await axios.post('http://127.0.0.1:8889/save_form_to_db', {
-      name: values.name,
-      surname: values.surname,
-      phone: values.phone,
-      email: values.email,
-      topic: values.topic,
-      text: values.text
-      });
-      // Handle the response from the API as needed
-      console.log(response.data);
-      } catch (error) {
-        // Handle any errors that occur during the API request
-        console.error(error);
-      }
-      })
+        const submit = handleSubmit(values => {
+          alert(JSON.stringify(values, null, 2))
+        })
   
-        return { name, surname, phone, email, topic, text, checkbox, items, submit, handleReset }
+        return { name, surename, phone, email, select, text, checkbox, items, submit, handleReset }
       },
     }
   </script>
@@ -194,9 +147,5 @@
     max-width: 400px;
     margin: 0 auto;
   }
-.rounded-card {
-border-radius: 30px;
-background: rgb(255,255,255);
-background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(194,102,255,1) 87%, rgba(140,0,255,1) 100%);
-}
+
 </style>

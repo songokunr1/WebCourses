@@ -4,7 +4,8 @@ import Contact from '../views/Contact.vue'
 import Blog from '../views/Blog.vue'
 import Portfolio from '../views/Portfolio.vue'
 import Consultation from '../views/Consultation.vue'
-
+import Form from '../views/Form.vue'
+import PythonPodstawy from '../views/PythonPodstawy.vue' 
 const routes = [
   {
     path: '/contact',
@@ -30,6 +31,16 @@ const routes = [
     path: '/consultation',
     name: 'Consultation',
     component: Consultation
+  },
+  {
+    path: '/form',
+    name: 'Form',
+    component: Form
+  },
+  {
+    path: '/PythonPodstawy',
+    name: 'PythonPodstawy',
+    component: PythonPodstawy
   }
 ]
 

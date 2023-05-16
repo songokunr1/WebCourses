@@ -29,7 +29,7 @@ export default {
   data: () => ({
     navLinks: [
       {
-        text: 'Kontakt',
+    text: 'Kontakt',
 		path: '/contact',
 		icon: 'ion-ios-call'
       },
@@ -38,21 +38,26 @@ export default {
 		path: '/courses',
 		icon: 'ion-ios-paper'
       },
-      {
-        text: 'Blog',
-		path: '/blog',
-		icon: 'ion-ios-book'
-      },
-      {
-        text: 'Portfolio',
-		path: '/portfolio',
-		icon: 'ion-ios-man'
-      },
-      {
-        text: 'Konsultacje',
-		path: '/consultation',
+    //   {
+    //     text: 'Blog',
+		// path: '/blog',
+		// icon: 'ion-ios-book'
+    //   },
+    //   {
+    //     text: 'Portfolio',
+		// path: '/portfolio',
+		// icon: 'ion-ios-man'
+    //   },
+     {
+        text: 'Zapytaj',
+		path: '/form',
 		icon: 'ion-ios-briefcase'
       }
+    //   {
+    //     text: 'Konsultacje',
+		// path: '/consultation',
+		// icon: 'ion-ios-briefcase'
+    //   }
     ]
   })
 }

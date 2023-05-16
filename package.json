@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "element-plus": "^2.0.2",
     "roboto-fontface": "*",
+    "vee-validate": "^4.9.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "webfontloader": "^1.0.0"

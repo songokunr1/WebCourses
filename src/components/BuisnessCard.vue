@@ -17,16 +17,17 @@
 			<div class="actions">
 				<button class="btn" @click="copy(tel)">+48514487406</button>
 				<button class="btn" @click="copy(email)">pawelm18@gmail.com</button>
-        <button class="big" @click="copy(eKorepetycje)">
+        <button class="big" color="primary" @click="copy(eKorepetycje)">
       <NotEl :tytul='tytul' :Notyfication='Notyfication' />
           
           https://www.e-korepetycje.net/matpaw/programowanie</button>
+          <button class="big text-h7 "  @click="redirectToForm"> Kliknij aby wysłać formularz z zapytaniem!</button>
 			</div>
 		</div>
 		
 		<div class="stats">
 			<div class="box">
-				<span class="value">+4</span>
+				<span class="value">4+</span>
 				<span class="parameter">lat doświadczenia</span>
 			</div>
 			<div class="box">
@@ -61,15 +62,20 @@ export default {
     }
     },
         methods: {
-      copy(text){
-        navigator.clipboard.writeText(text).then(() => {
-        this.tytul = text
-        this.Notyfication =   this.Notyfication +1    
-      })
-      .catch(() => {
-        alert("something went wrong");
-      });
+          redirectToForm() {
+          this.$router.push('/form'); // Replace '/form' with the actual route path
+          },
+          copy(text) {
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            input.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            document.body.removeChild(input);
 
+            this.tytul = text;
+            this.Notyfication = this.Notyfication + 1;
       }
     },
   computed: {
@@ -88,8 +94,8 @@ export default {
   position: relative;
   top: 30px;
   left: 0px;
-  height: 559px;
-  width: 520px;
+  height: 639px;
+  width: 440px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -173,7 +179,7 @@ export default {
 }
 .profile .actions .big {
   display: block;
-  width: 420px;
+  width: 360px;
   height: 50px;
   margin: 0 auto 10px 40px;
   background: none;
@@ -200,7 +206,7 @@ export default {
 }
 .stats .box {
   box-sizing: border-box;
-  width: 220px;
+  width: 140px;
   height: 155px;
   background: #e2cef3;
   text-align: center;
@@ -225,6 +231,11 @@ export default {
   font-size: 19px;
 }
 
+@media (max-width: 768px) {
+  .frame {
+    width: 20%;
+    margin: 0 360px 10px auto;
+  }
 
-
+}
 </style>

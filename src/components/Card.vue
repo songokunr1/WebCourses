@@ -1,5 +1,9 @@
 <template>
-<div >
+<el-row :gutter="10">
+    <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="20" :offset="2" background="red">
+    <div> 
+    
+<div>
 <section class="page-contain" @click.self="showDetails=false">
    <button @mouseover="showContent = true" @mouseleave="showContent = false" @click="SetShowDetails" >
 
@@ -54,12 +58,12 @@
     <div v-show="showContent"> <br> <br> </div>
     <div>
         <span class="alignleft sketchy">10h</span>
-        <span class="alignright sketchy">300zł</span>
+        <span class="alignright sketchy">500zł</span>
     </div>
     <div></div>
   </a>
   </button>
-  <div class="center" style="absolute">
+  <div class="center" style="relative">
   <Details v-show="showDetails" showDetails=showDetails />
   </div>
     
@@ -70,7 +74,11 @@
 
      
 </section>
+
 </div>
+</div> 
+    </el-col>
+    </el-row>
 </template>
 
 <script>
@@ -236,13 +244,13 @@ p {
   100% {
     transform: translateX(0.125em);
   }
-}
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-}
+  }
+  .alignleft {
+    float: left;
+  }
+  .alignright {
+    float: right;
+  }
 
 .gold {
     color: blue;

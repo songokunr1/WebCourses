@@ -1,15 +1,13 @@
 <template>
   <transition name="bounce">
   <el-row :gutter="10">
-    <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" :offset="4">
+    <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="20" :offset="2">
     <div>
        <!-- class="grid-content bg-purple"> -->
 <div class="toMid">
   <BuisnessCard />
 </div>
-<div class="details">
-      
-  </div>
+
   </div> 
       </el-col>
   </el-row>

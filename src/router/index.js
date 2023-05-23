@@ -13,6 +13,11 @@ const routes = [
     component: Contact
   },
   {
+    path: '/',
+    name: 'Contact2',
+    component: Contact
+  },
+  {
     path: '/courses',
     name: 'Courses',
     component: Courses

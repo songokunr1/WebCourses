@@ -11,7 +11,7 @@ RUN npm install -g @vue/cli
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --force
 
 # Apply npm audit fix with the --force flag
 RUN npm audit fix --force

@@ -7,6 +7,7 @@ WORKDIR /app
 # Install the desired version of npm
 RUN npm install -g npm@9.2.0
 
+RUN npm install -g @vue/cli
 # Copy package.json and package-lock.json
 COPY package*.json ./
 

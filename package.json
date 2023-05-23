@@ -9,7 +9,7 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "axios": "^1.4.0",
-    "core-js": "^3.21.0",
+    "core-js": "^3.6.5",
     "element-plus": "^2.0.2",
     "roboto-fontface": "*",
     "vee-validate": "^4.9.3",
@@ -18,8 +18,9 @@
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
+    "@vue/cli-plugin-babel": "5.0.0-beta.7",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "5.0.0-beta.7",
     "@vue/compiler-sfc": "^3.0.0",
     "sass": "^1.38.0",
     "sass-loader": "^10.0.0",

@@ -6,5 +6,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - '8080:8080'
+    container_name: my-portfolio-app-frontend
     volumes:
       - .:/app

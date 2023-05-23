@@ -8,5 +8,10 @@ import Vue from 'vue'
 import { createVuetify } from 'vuetify'
 
 export default createVuetify(
+  {
+    theme: {
+      defaultTheme: 'light'
+    }
+  }
   // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 )

@@ -1,0 +1,4 @@
+.background {
+    background-color: #f2f2f2; /* Light grey background color */
+    /* background-image: linear-gradient(to bottom right, #f2f2f2, #a256b0); Gradient from light grey to purple */
+    background-image: linear-gradient(125deg, rgba(228,216,236,1) 21%, rgba(206,133,255,1) 28%, rgba(228,216,236,1) 31%, rgba(209,140,255,1) 33%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 56%, rgba(213,151,255,1) 82%, rgba(228,216,236,1) 85%, rgba(194,102,255,1) 87%, rgba(190,94,255,1) 88%, rgba(140,0,255,0.9137780112044818) 100%);}

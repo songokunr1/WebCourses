@@ -114,7 +114,7 @@ nav {
   background: red($color: #4f13af);
 }
 a {
-	border-radius: 10%;
+	border-radius: 30%;
 }
 
 .fade-enter-from,

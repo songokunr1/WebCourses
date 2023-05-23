@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" >
     
     <ResponsiveNavigation
 		:nav-links="navLinks"
@@ -15,7 +15,8 @@
     <router-link to="/courses">kursy! </router-link> 
     </nav> -->
   </div>
-  <router-view/>
+  <div class="background">
+  <router-view/></div>
 </template>
 
 <script>
@@ -96,12 +97,17 @@ body {
 }
 
 .router-link-exact-active{
-  color: rebeccapurple;
-  background: rgb(245, 234, 234) ;
+  color: rgb(187, 141, 232);
+  background: rgb(248, 221, 247) ;
 }
 .router-link-active{
   color: rebeccapurple;
-  background: rgb(75, 37, 170);
+  background: rgb(189, 174, 226);
   border-radius: 2px;
+}
+
+.background {
+  background-color: #f2f2f2; /* Light grey background color */
+  background-image: linear-gradient(to bottom right, #f2f2f2, #9c27b0); /* Gradient from light grey to purple */
 }
 </style>

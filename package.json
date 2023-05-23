@@ -19,12 +19,27 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "5.0.0-beta.7",
-    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-service": "5.0.0-beta.7",
     "@vue/compiler-sfc": "^3.0.0",
     "sass": "^1.38.0",
     "sass-loader": "^10.0.0",
     "vue-cli-plugin-vuetify": "~2.4.5",
     "vuetify-loader": "^2.0.0-alpha.0"
-  }
+  },
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songokunr1/WebCourses.git"
+  },
+  "keywords": [
+    "vue-portfolio"
+  ],
+  "author": "Matejko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/songokunr1/WebCourses/issues"
+  },
+  "homepage": "https://github.com/songokunr1/WebCourses#readme"
 }

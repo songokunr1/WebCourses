@@ -1,6 +1,8 @@
 <template>
               <br>
-
+<v-container>
+          <v-row>
+            <v-col cols="12" sm="12" >
       <!-- <div class="toMid"> -->
         <div class="card">
     <el-card class="rounded-card" :body-style="{ padding: '20px'}">
@@ -14,20 +16,24 @@
   </div>
 
   </el-card>
+
 </div>
 <br>
 
       <Form/>
+                 </v-col>
+          </v-row>
+          </v-container>
       <!-- </div> -->
   </template>
-  
+
   <script>
   import Form from "@/components/Form.vue"
   export default {
     components: {Form}
   }
   </script>
-  
+
   <style>
   .card {
     width: 100%;

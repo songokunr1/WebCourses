@@ -1,7 +1,6 @@
 <template>
-
   <div class="card">
-    <el-card class="rounded-card" :body-style="{ padding: '20px'}">
+    <el-card class="rounded-card" :body-style="{ padding: '20px' }">
       <div class="card-body">
         <div class="card-header">
           <h3 class="card-title">{{ topic }}</h3>
@@ -13,23 +12,31 @@
         </div>
         <p class="card-price">{{ price }}</p>
         <p class="card-description">{{ description }}</p>
-        <br>
+        <br />
+        </div>
         <el-timeline>
           <el-timeline-item v-for="point in points" :key="point">{{ point }}</el-timeline-item>
         </el-timeline>
         <div class="card-footer">
-          <div class="card-buttons">
-            <v-btn block color="primary" class="buy-button" @click="redirectToForm">Zapisz się!</v-btn>
-            <v-btn @click="redirectToReadMore" class="more-button" text>Przeczytaj więcej</v-btn>
-          </div>
-        </div>
-      </div>
-      <div>
-        <!-- <Form /> -->
+        <v-container>
+          <v-row>
+            <v-col cols="12" sm="6" class="left-button-col">
+              <v-btn block color="primary" class="buy-button" @click="redirectToForm">
+                <span class="button-text"> Zapisz się! </span>
+              </v-btn>
+            </v-col>
+           <v-col cols="12" sm="6" class="left-button-col">
+              <v-btn @click="redirectToReadMore" class="more-button" text>
+                <span class="button-text">więcej</span>
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-container>
       </div>
     </el-card>
   </div>
 </template>
+
 
 <script>
 import Form from '@/components/Form.vue';
@@ -123,17 +130,21 @@ color: #888;
   background-color: #4caf50;
   color: #fff;
   margin-right: 10px;
-  min-width: 150px;
+  min-width: 120px;
 }
 
 .more-button {
-  background-color: transparent;
-  color: rgb(29, 28, 28);
-  border: 1px solid #888;
-  border-radius: 5px;
-  min-width: 150px;
-  text-align: center;
-  padding: 10px 20px;
-  cursor: pointer;
+  flex: 1;
+  margin-right: 10px;
+}
+.button-text {
+  font-size: 10px;
+}
+.left-button-col {
+  display: flex;
+  justify-content: flex-start;
+}
+.text-right {
+  text-align: right;
 }
 </style>

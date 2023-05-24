@@ -109,9 +109,9 @@ export default {
 .center {
   position: relative;
   top: 30px;
-  left: 0px;
+  left: 30px;
   height: 679px;
-  width: 440px;
+  width: 360px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -119,7 +119,7 @@ export default {
 }
 .profile {
   float: left;
-  width: 300px;
+  width: 220px;
   height: 420px;
   text-align: center;
 }
@@ -177,13 +177,13 @@ export default {
   line-height: 15px;
 }
 .profile .actions {
-  margin-top: 33px;
+  margin-top: 23px;
 }
 .profile .actions .btn {
   display: block;
-  width: 220px;
+  width: 330px;
   height: 50px;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px 15px;
   background: none;
   border: 1px solid #7e52e4;
   border-radius: 20px;
@@ -192,12 +192,13 @@ export default {
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   color: #7f5fd6;
+  font-size: 12px;
 }
 .profile .actions .big {
   display: block;
-  width: 360px;
+  width: 330px;
   height: 50px;
-  margin: 0 auto 10px 40px;
+  margin: 0 auto 10px 15px;
   background: none;
   border: 1px solid #7e52e4;
   border-radius: 20px;

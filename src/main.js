@@ -1,17 +1,21 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-import vuetify from './plugins/vuetify';
-import { loadFonts } from './plugins/webfontloader';
+/**
+ * main.js
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
+
+// Components
+import App from './App.vue'
+
+// Composables
+import { createApp } from 'vue'
+
+// Plugins
+import { registerPlugins } from '@/plugins'
+
+const app = createApp(App)
 import ElementPlus from 'element-plus';
-import 'element-plus/dist/index.css';
-import 'vuetify/lib/framework'; // Update the import statement
-import './global.css'; // Import the global CSS file
 
-loadFonts();
-
-createApp(App)
-  .use(router)
-  .use(vuetify)
-  .use(ElementPlus)
-  .mount('#app');
+registerPlugins(app)
+app.use(ElementPlus)
+app.mount('#app')

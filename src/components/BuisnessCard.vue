@@ -2,15 +2,15 @@
 
 <div class="frame">
   <div class="center">
-    
+
 		<div class="profile">
 			<div class="image">
 				<div class="circle-1"></div>
 				<div class="circle-2"></div>
-       <img :src="iconUrl" width="165" height="165" alt="Paweł Matejko"/> 
+       <img :src="iconUrl" width="165" height="165" alt="Paweł Matejko" />
 
 			</div>
-			
+
 			<div class="name">Paweł Matejko</div>
 			<div class="job">Analist, Data Engineer</div>
 			<div class="job">pasjonat nauczania Pythona</div><br>
@@ -28,13 +28,13 @@
 				<button class="btn" @click="copy(email)">pawelm18@gmail.com</button>
         <button class="big" color="primary" @click="copy(eKorepetycje)">
       <NotEl :tytul='tytul' :Notyfication='Notyfication' />
-          
+
           https://www.e-korepetycje.net/matpaw/programowanie</button>
           <button class="big text-h7 "  @click="redirectToForm"> Kliknij aby wysłać formularz z zapytaniem!</button>
-          
+
 			</div>
 		</div>
-		
+
 		<div class="stats">
 			<div class="box">
 				<span class="value">5+</span>
@@ -56,12 +56,13 @@
 
 <script>
 import NotEl from '@/components/NotEl.vue'
+import imgUrl from '@/assets/moje.jpg'
 
 export default {
   components: {NotEl},
   data() {
     return {
-       imageSrc: '@/assets/moje.jpg',
+       imageSrc: imgUrl,
        tel: '+48514487406',
        email: 'pawelm18@gmail.com',
        eKorepetycje: 'https://www.e-korepetycje.net/matpaw/programowanie',
@@ -95,16 +96,15 @@ export default {
     }
     },
   computed: {
-  iconUrl () {
-    return require('@/assets/moje.jpg')
-    // The path could be '../assets/img.png', etc., which depends on where your vue file is
+  iconUrl() {
+    return imgUrl;
   }
 }
 }
 </script>
 
 <style scoped>
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300); 
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
 
 .center {
   position: relative;

@@ -1,9 +1,9 @@
 <template>
   <div id="app" >
-    
+
     <ResponsiveNavigation
 		:nav-links="navLinks"
-		:image-path="require('./assets/logo.png')"
+		:image-path="'./assets/logo.png'"
 		background="#fff"
 		link-color="#777"
 		hoverBackground="#ddd"
@@ -11,8 +11,8 @@
   <!-- <div class="main"> -->
   <!-- </div> -->
   <!-- <nav>
-    <router-link to="/">home</router-link> 
-    <router-link to="/courses">kursy! </router-link> 
+    <router-link to="/">home</router-link>
+    <router-link to="/courses">kursy! </router-link>
     </nav> -->
   </div>
   <div class="background">

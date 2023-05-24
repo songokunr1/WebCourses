@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import imgUrl from "@/assets/moje.jpg";
+
 export default {
 	props: ['navLinks', 'background', 'linkColor', 'hoverBackground', 'imagePath'],
 	methods: {
@@ -33,6 +35,7 @@ export default {
 			nav.contains('active') ? nav.remove('active') : nav.add('active')
 		}
 	}
+
 }
 </script>
 
@@ -64,12 +67,12 @@ nav {
 		i {
 			margin-right: 10px;
 			font-size: 75px;
-			
+
 		}
 		li {
 			list-style-type: none;
 			padding: 10px 20px;
-			
+
 		}
 	}
 }
@@ -99,12 +102,12 @@ nav {
 		i {
 			margin-right: 10px;
 			font-size: 30px;
-			
+
 		}
 		li {
 			list-style-type: none;
 			padding: 10px 10px;
-			
+
 		}
         }
     }

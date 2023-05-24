@@ -16,13 +16,17 @@ COPY . .
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --force
+RUN rm -rf node_modules
 
 RUN npm install vuetify
+
+RUN npm install --force
+
 # Apply npm audit fix with the --force flag
 RUN npm audit fix --force
 
 
+RUN npm install vuetify
 
 # Build the application
 RUN npm run build

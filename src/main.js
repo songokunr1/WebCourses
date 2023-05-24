@@ -15,6 +15,7 @@ import { registerPlugins } from '@/plugins'
 
 const app = createApp(App)
 import ElementPlus from 'element-plus';
+import './global.css'; // Import the global CSS file
 
 registerPlugins(app)
 app.use(ElementPlus)

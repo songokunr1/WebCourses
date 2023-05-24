@@ -1,17 +1,12 @@
-// Styles
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
-import Vue from 'vue'
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
+import Vue from 'vue';
+import Vuetify from 'vuetify'; // Add this import
 
+Vue.use(Vuetify);
 
-// Vuetify
-import { createVuetify } from 'vuetify'
-
-export default createVuetify(
-  {
-    theme: {
-      defaultTheme: 'light'
-    }
+export default new Vuetify({
+  theme: {
+    defaultTheme: 'light'
   }
-  // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
-)
+});

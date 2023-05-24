@@ -11,7 +11,7 @@ RUN npm install -g @vue/cli
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --force
+RUN npm install
 
 # Copy application code
 COPY . .

@@ -1,0 +1,10 @@
+docker stop $(docker ps -aq)
+docker rm $(docker ps -aq)
+
+# Remove all images
+docker rmi $(docker images -aq)
+
+# Remove Docker Compose networks
+docker network ls --filter name="your-compose-project-prefix" -q | xargs docker network rm
+
+echo "Docker environment cleaned."

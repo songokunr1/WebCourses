@@ -1,11 +1,27 @@
-FROM node:latest as build-stage
+
+# Base image
+FROM node:14-alpine
+
+# Set working directory
 WORKDIR /app
+
+# Install the desired version of npm
+
+RUN npm install -g @vue/cli
+# Copy package.json and package-lock.json
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install --force
-COPY ./ .
+
+# Apply npm audit fix with the --force flag
+RUN npm audit fix --force
+
+# Copy application code
+COPY . .
+
+# Build the application
 RUN npm run build
 
-FROM nginx as production-stage
-RUN mkdir /app
-COPY --from=build-stage /app/dist /app
-COPY nginx.conf /etc/nginx/nginx.conf
+# Specify the startup command
+CMD ["npm", "run", "serve"]

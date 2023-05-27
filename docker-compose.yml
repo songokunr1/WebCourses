@@ -9,3 +9,9 @@ services:
     container_name: my-portfolio-app-frontend
     volumes:
       - .:/app
+    networks:
+      - my-network
+
+networks:
+      my-network:
+        external: true

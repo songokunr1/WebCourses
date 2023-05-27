@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <el-row :gutter="40">
-      <el-col :span="24" :offset="0">
-        <div class="">
+  <v-container fluid>
+    <v-row justify="center">
+      <v-col cols="12">
+        <div class="toMid">
           <Details />
         </div>
-      </el-col>
-    </el-row>
-  </div>
+      </v-col>
+    </v-row>
+  </v-container>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </template>
 
 <script>
@@ -20,16 +20,13 @@ export default {
   components: { Details, Form },
   methods: {
     openLink(url) {
-      window.open(url, '_blank');
-    }
-  }
-
+      window.open(url, "_blank");
+    },
+  },
 };
-
 </script>
 
-<style>
-
+<style scoped>
 .toMid {
   display: block;
   margin-left: auto;
@@ -42,5 +39,4 @@ export default {
   text-align: center;
   margin-bottom: 20px;
 }
-
 </style>

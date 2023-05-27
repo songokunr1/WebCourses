@@ -1,19 +1,9 @@
 <template>
-  <transition name="bounce">
-  <el-row :gutter="10">
-    <el-col :xs="16" :sm="16" :md="16" :lg="16" :xl="16" :offset="4">
-    <div>
-       <!-- class="grid-content bg-purple"> -->
+
 <div class="toMid">
   <BuisnessCard />
 </div>
-<div class="details">
-      
-  </div>
-  </div> 
-      </el-col>
-  </el-row>
-    </transition>
+
 
 </template>
 <script>
@@ -80,7 +70,7 @@ form {
     align-items: left;
     position: relative;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 2.5);
-    
+
 
   }
   label {
@@ -91,7 +81,7 @@ form {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
-    
+
   }
   input, select, textarea {
     display: block;
@@ -101,7 +91,7 @@ form {
     border-color: inherit;
     border-bottom: 3px solid rgb(155, 75, 75);
     color: #555;
-    border: 2px solid rgb(10, 195, 149); 
+    border: 2px solid rgb(10, 195, 149);
     border-style: solid;
     border-radius: 9px;
   }
@@ -115,7 +105,7 @@ form {
     .row {
   display: flex;
   border-radius: 9px;
-  
+
 }
 label {
     font-size: 1em;
@@ -223,7 +213,7 @@ label {
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
-} 
+}
 
   h3 {
     color: #366792;
@@ -251,7 +241,7 @@ label {
     line-height: 1;
     margin: 1 3 1.777777778em;
     transition: color 0.45s ease;
-  }     
+  }
   /* Small screens */
 @media (max-width: 768px) {
     .details {
@@ -271,7 +261,7 @@ label {
     .details {
         font-size: 1.1em;
     }
-} 
+}
 
 .toMid {
   width: 80%;
@@ -284,6 +274,6 @@ label {
     align-items: center;
     width: 60%;
   }
-  
+
 }
 </style>

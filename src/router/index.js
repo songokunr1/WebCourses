@@ -5,7 +5,9 @@ import Blog from '../views/Blog.vue'
 import Portfolio from '../views/Portfolio.vue'
 import Consultation from '../views/Consultation.vue'
 import Form from '../views/Form.vue'
-import PythonPodstawy from '../views/PythonPodstawy.vue' 
+import PythonPodstawy from '../views/PythonPodstawy.vue'
+import ThankYou from "@/views/ThankYou.vue";
+
 const routes = [
   {
     path: '/contact',
@@ -46,7 +48,13 @@ const routes = [
     path: '/PythonPodstawy',
     name: 'PythonPodstawy',
     component: PythonPodstawy
-  }
+  },
+  {
+    path: "/thankyou",
+    name: 'thankyou!',
+    component: ThankYou,
+  },
+
 ]
 
 const router = createRouter({

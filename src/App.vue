@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
     <ResponsiveNavigation
       :nav-links="navLinks"
       :image-path="'./assets/logo.png'"
@@ -8,61 +7,47 @@
       link-color="#777"
       hoverBackground="#ddd"
     />
-  </div>
-  <div class="background">
-  <div>
-    <router-view v-slot="{ Component }">
-      <transition name="fade">
-        <component :is="Component"/>
-      </transition>
 
-    </router-view>
+    <div class="background">
+      <div>
+<router-view v-slot="{ Component, route }">
+  <transition name="fade">
+    <component :is="Component" :key="route.path" />
+  </transition>
+</router-view>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import ResponsiveNavigation from '@/components/ResponsiveNavigation'
-import Card from '@/components/Card.vue'
 
 export default {
   components: {
-    ResponsiveNavigation, Card
+    ResponsiveNavigation
   },
-  data: () => ({
-    navLinks: [
-      {
-        text: 'Kontakt',
-        path: '/contact',
-        icon: 'ion-ios-call'
-      },
-      {
-        text: 'Kursy',
-        path: '/courses',
-        icon: 'ion-ios-paper'
-      },
-      //   {
-      //     text: 'Blog',
-      // path: '/blog',
-      // icon: 'ion-ios-book'
-      //   },
-      //   {
-      //     text: 'Portfolio',
-      // path: '/portfolio',
-      // icon: 'ion-ios-man'
-      //   },
-      {
-        text: 'Zapytaj',
-        path: '/form',
-        icon: 'ion-ios-briefcase'
-      }
-      //   {
-      //     text: 'Konsultacje',
-      // path: '/consultation',
-      // icon: 'ion-ios-briefcase'
-      //   }
-    ]
-  })
+  data() {
+    return {
+      navLinks: [
+        {
+          text: 'Kontakt',
+          path: '/contact',
+          icon: 'ion-ios-call'
+        },
+        {
+          text: 'Kursy',
+          path: '/courses',
+          icon: 'ion-ios-paper'
+        },
+        {
+          text: 'Zapytaj',
+          path: '/form',
+          icon: 'ion-ios-briefcase'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -125,6 +110,7 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease-out;

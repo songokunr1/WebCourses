@@ -57,7 +57,7 @@ export default {
     rgba(194, 102, 255, 1) 87%,
     rgba(140, 0, 255, 1) 100%
   );
-  
+
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;

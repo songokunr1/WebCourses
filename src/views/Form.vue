@@ -4,10 +4,9 @@
 <v-container>
           <v-row>
             <v-col cols="12" sm="12" >
-      <!-- <div class="toMid"> -->
         <div class="card">
         <v-card class="rounded-card">
-          <v-card-text>
+          <v-card-text >
       <div class="card-body">
       <h3 class="contact-text text-h6 mb-0 font-italic">Chcesz dołączyć</h3>
     <h3 class="contact-text text-h6 mb-0 font-italic">na listę oczekującą</h3>

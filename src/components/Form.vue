@@ -155,7 +155,7 @@
 
     const submit = handleSubmit(async values => {
   try {
-    const response = await axios.post('http://app:8888/send_email', {
+    const response = await axios.post('/send_email', {
       name: values.name,
       surname: values.surname,
       phone: values.phone,
